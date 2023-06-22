@@ -14,3 +14,16 @@ If you need to modify the setup assistant, you'll need to:
 2. Create (or softlnk) a SRDF file at `config/tiago.srdf` if you want to load existing moveit configuration. The SRDF files used are in `config/srdf`, and only changes in that directory will not reflect on the robot.
 
 Make sure that after running to reflect the changes in the auto generated files.
+
+
+## Usage in real robot
+
+MoveIt
+```shell
+$ ros2 launch tiago_moveit_config move_group.launch.py use_sim_time:=False
+```
+
+Rviz with MoveIt
+```shell
+$ ros2 launch tiago_moveit_config moveit_rviz.launch.py use_sim_time:=False
+```
